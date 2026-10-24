@@ -1,0 +1,690 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f5f7fb;
+
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 240px;
+
+    min-height: 100vh;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    background: #72a5ed;
+
+    padding: 30px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.logo {
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    margin-bottom: 45px;
+}
+
+.logo strong {
+    margin-left: 7px;
+}
+
+.sidebar nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.sidebar nav a {
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    transition: .2s;
+}
+
+.sidebar nav a:hover {
+    background: rgba(255,255,255,.15);
+}
+
+.sidebar nav a.active {
+    background: white;
+
+    color: #397fd9;
+
+    font-weight: bold;
+}
+
+.logout {
+    margin-top: auto;
+
+    background: white;
+
+    color: #397fd9;
+
+    padding: 13px;
+
+    border-radius: 9px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    margin-left: 240px;
+
+    padding: 35px 45px 60px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.header p {
+    color: #888;
+
+    font-size: 12px;
+
+    margin-bottom: 6px;
+}
+
+.header h1 {
+    color: #397fd9;
+
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+}
+
+.back {
+    background: white;
+
+    color: #397fd9;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.05);
+}
+
+
+/* =========================
+   SUCCESS
+========================= */
+
+.success-banner {
+    max-width: 850px;
+
+    background: #e4f7ec;
+
+    padding: 18px 22px;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+.success-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    background: #2da462;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+.success-banner h2 {
+    color: #238451;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    margin-bottom: 4px;
+}
+
+.success-banner p {
+    color: #5b826d;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   STUDENT CARD
+========================= */
+
+.student-card {
+    max-width: 850px;
+
+    background: #72a5ed;
+
+    color: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(50, 100, 180, .18);
+
+    margin-bottom: 25px;
+}
+
+
+/* HEADER KARTU */
+
+.card-header {
+    padding: 22px 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.2);
+}
+
+.campus-logo {
+    width: 45px;
+    height: 45px;
+
+    background: white;
+
+    color: #397fd9;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.card-header h3 {
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+}
+
+.card-header p {
+    font-size: 10px;
+
+    opacity: .9;
+
+    margin-top: 2px;
+}
+
+
+/* CONTENT */
+
+.card-content {
+    padding: 30px;
+
+    display: flex;
+
+    gap: 30px;
+
+    align-items: center;
+}
+
+/* =========================
+   FOTO MAHASISWA
+========================= */
+
+.student-photo {
+    width: 130px;
+    height: 160px;
+
+    flex-shrink: 0;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    border: 3px solid rgba(255, 255, 255, 0.8);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* FOTO */
+
+.student-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* JIKA FOTO TIDAK ADA */
+
+.no-photo {
+    width: 100%;
+    height: 100%;
+
+    background: #f1f5f9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+}
+
+.no-photo span {
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    text-align: center;
+
+    line-height: 1.5;
+}
+
+
+/* STATUS */
+
+.status-aktif {
+    color: #28a35f;
+}
+
+.student-data {
+    flex: 1;
+}
+
+.student-data > span {
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    opacity: .9;
+}
+
+.student-data h1 {
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    margin-top: 4px;
+
+    margin-bottom: 25px;
+}
+
+
+/* IDENTITY */
+
+.identity {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px 30px;
+}
+
+.identity small {
+    display: block;
+
+    font-size: 10px;
+
+    opacity: .8;
+
+    margin-bottom: 4px;
+}
+
+.identity strong {
+    display: block;
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+}
+
+
+/* FOOTER */
+
+.card-footer {
+    background: rgba(0,0,0,.06);
+
+    padding: 14px 28px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.card-footer span {
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+.card-footer strong {
+    background: white;
+
+    color: #2c9c5d;
+
+    padding: 6px 13px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   DETAIL CARD
+========================= */
+
+.detail-card {
+    max-width: 850px;
+
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.05);
+}
+
+.detail-card h2 {
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    margin-bottom: 20px;
+}
+
+.detail-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.detail-grid div {
+    background: #f7f9fc;
+
+    padding: 16px;
+
+    border-radius: 9px;
+}
+
+.detail-grid span {
+    display: block;
+
+    color: #888;
+
+    font-size: 10px;
+
+    margin-bottom: 5px;
+}
+
+.detail-grid strong {
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+}
+
+.detail-grid .blue {
+    color: #397fd9;
+}
+
+
+/* =========================
+   EMPTY
+========================= */
+
+.empty-card {
+    max-width: 650px;
+
+    background: white;
+
+    padding: 55px 30px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.06);
+}
+
+.empty-icon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.empty-card h2 {
+    font-family: Georgia, serif;
+
+    margin-bottom: 10px;
+}
+
+.empty-card p {
+    max-width: 420px;
+
+    margin: 0 auto 22px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.empty-card a {
+    display: inline-block;
+
+    background: #72a5ed;
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 750px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+
+        padding: 25px 20px;
+    }
+
+    .card-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .student-photo {
+        width: 100px;
+        height: 115px;
+
+        font-size: 50px;
+    }
+
+    .identity,
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media(max-width: 500px) {
+
+    .header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;  
+    }
+
+    .student-data h1 {
+        font-size: 29px;
+    }
+
+    .card-content {
+        padding: 22px;
+    }
+
+}
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 12px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar .logo-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sidebar .logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sidebar .logo-text {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.sidebar .logo-text strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+}
+
+.sidebar .logo-text span {
+    margin-top: 4px;
+    font-size: 10px;
+}

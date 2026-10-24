@@ -1,0 +1,626 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background: #72a5ed;
+
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    margin-bottom: 45px;
+}
+
+.logo strong {
+    margin-left: 7px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.sidebar nav a {
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    transition: .2s;
+}
+
+.sidebar nav a:hover {
+    background: rgba(255,255,255,.15);
+}
+
+.sidebar nav a.active {
+    background: white;
+
+    color: #397fd9;
+
+    font-weight: bold;
+}
+
+.logout {
+    margin-top: auto;
+
+    background: white;
+
+    color: #397fd9;
+
+    padding: 13px;
+
+    border-radius: 9px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+    margin-left: 240px;
+
+    padding: 35px 45px 60px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.header p {
+    color: #888;
+
+    font-size: 12px;
+
+    margin-bottom: 6px;
+}
+
+.header h1 {
+    font-family: Georgia, serif;
+
+    color: #397fd9;
+
+    font-size: 28px;
+}
+
+.back {
+    background: white;
+
+    color: #397fd9;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.05);
+}
+
+
+/* =========================
+   INFORMATION
+========================= */
+
+.information {
+    max-width: 850px;
+
+    background: #e5f5ec;
+
+    padding: 18px 22px;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.information-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    background: #32a867;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+.information h3 {
+    color: #238451;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    margin-bottom: 4px;
+}
+
+.information p {
+    color: #548069;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    max-width: 850px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.05);
+}
+
+.card-title {
+    margin-bottom: 25px;
+}
+
+.card-title h2 {
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+.card-title p {
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   DATA
+========================= */
+
+.data-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+}
+
+.data-item {
+    background: #f7f9fc;
+
+    padding: 16px;
+
+    border-radius: 9px;
+
+    border: 1px solid #edf0f5;
+}
+
+.data-item span {
+    display: block;
+
+    color: #888;
+
+    font-size: 11px;
+
+    margin-bottom: 6px;
+}
+
+.data-item strong {
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+}
+
+.data-item strong.lulus {
+    color: #28a35f;
+}
+
+
+/* =========================
+   CONFIRMATION
+========================= */
+
+.confirmation {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    background: #f7f9fc;
+
+    padding: 15px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    margin-bottom: 18px;
+}
+
+.confirmation input {
+    margin-top: 2px;
+
+    width: 16px;
+    height: 16px;
+
+    accent-color: #72a5ed;
+}
+
+.confirmation span {
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: #555;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.submit-button {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 14px;
+
+    background: #72a5ed;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.submit-button:hover {
+    background: #5c96e7;
+}
+
+
+/* =========================
+   STATUS CARD
+========================= */
+
+.status-card {
+    max-width: 650px;
+
+    background: white;
+
+    padding: 50px 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.06);
+}
+
+.big-icon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.success-circle {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 18px;
+
+    background: #e2f7ea;
+
+    color: #28a35f;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 38px;
+
+    font-weight: bold;
+}
+
+.status-card h2 {
+    font-family: Georgia, serif;
+
+    margin-bottom: 10px;
+}
+
+.success-card h2 {
+    color: #28a35f;
+}
+
+.status-card p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    max-width: 420px;
+
+    margin: 0 auto 22px;
+}
+
+.status-card a {
+    display: inline-block;
+
+    background: #72a5ed;
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+    max-width: 850px;
+
+    padding: 13px;
+
+    margin-bottom: 20px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+}
+
+.message.error {
+    background: #ffe3e3;
+
+    color: #b12424;
+}
+
+.message.success {
+    background: #ddf7e8;
+
+    color: #16804a;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 750px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+
+        padding: 25px 20px;
+    }
+
+    .data-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+}
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid #dce3ed;
+
+    border-radius: 9px;
+
+    padding: 12px 14px;
+
+    font-size: 14px;
+
+    font-family: Arial, sans-serif;
+
+    outline: none;
+
+    background: white;
+}
+
+.form-group input,
+.form-group select {
+    height: 47px;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #72a5ed;
+
+    box-shadow:
+        0 0 0 3px rgba(114,165,237,.12);
+}
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 12px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar .logo-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sidebar .logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sidebar .logo-text {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.sidebar .logo-text strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+}
+
+.sidebar .logo-text span {
+    margin-top: 4px;
+    font-size: 10px;
+}

@@ -1,0 +1,353 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #edf3fa;
+    color: #123c66;
+}
+
+.login-page {
+    display: grid;
+    grid-template-columns: 52% 48%;
+    min-height: 100vh;
+    padding: 24px;
+    gap: 0;
+}
+
+/* BAGIAN KIRI */
+
+.login-left {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 45px 55px;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #064875,
+        #087eaa 65%,
+        #13a5c7
+    );
+    border-radius: 12px 0 0 12px;
+}
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    position: relative;
+    z-index: 2;
+}
+
+.unair-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-circle {
+    width: 78px;
+    height: 78px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+}
+
+.logo-circle img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.unair-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.brand-divider {
+    width: 1px;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.pmb-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pmb-brand h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+}
+
+.pmb-brand span {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.portal-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    align-self: flex-start;
+    margin-top: 75px;
+    padding: 15px 22px;
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 35px;
+    background: rgba(255,255,255,.10);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    position: relative;
+    z-index: 2;
+}
+
+.status-dot {
+    width: 11px;
+    height: 11px;
+    background: #65f0d5;
+    border-radius: 50%;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    margin-top: 45px;
+    max-width: 650px;
+}
+
+.hero-text h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 4.5vw, 68px);
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+    margin-bottom: 25px;
+}
+
+.hero-text h1 span {
+    display: block;
+    color: #76e7f2;
+}
+
+.hero-text p {
+    max-width: 610px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: rgba(255,255,255,.92);
+}
+
+.hero-decoration {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    right: -120px;
+    bottom: -120px;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 50%;
+}
+
+.hero-decoration::after {
+    content: "";
+    position: absolute;
+    inset: 30px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 50%;
+}
+
+/* BAGIAN KANAN */
+
+.login-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 0 12px 12px 0;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 500px;
+}
+
+.small-title {
+    color: #078ed0;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+}
+
+.login-box h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 3vw, 48px);
+    line-height: 1.15;
+    color: #123e6c;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #72839b;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #173d60;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 60px;
+    padding: 0 18px;
+    border: 1px solid #dce7f6;
+    border-radius: 15px;
+    background: #edf4ff;
+    color: #183b60;
+    font-size: 15px;
+    outline: none;
+    transition: .2s;
+}
+
+.form-group input:focus {
+    border-color: #078ed0;
+    box-shadow: 0 0 0 4px rgba(7,142,208,.10);
+    background: white;
+}
+
+.login-box form button {
+    width: 100%;
+    min-height: 62px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(100deg, #087dcc, #11a6cb);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.login-box form button:hover {
+    filter: brightness(.94);
+    transform: translateY(-1px);
+}
+
+.error {
+    padding: 14px 16px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    color: #a92323;
+    background: #fff0f0;
+    border: 1px solid #ffd7d7;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .login-page {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .login-left {
+        min-height: 440px;
+        padding: 35px;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .login-right {
+        padding: 40px 30px;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .portal-label {
+        margin-top: 45px;
+    }
+
+    .hero-text {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 520px) {
+    .login-left {
+        padding: 25px 20px;
+        min-height: 400px;
+    }
+
+    .brand-header {
+        gap: 12px;
+    }
+
+    .logo-circle {
+        width: 55px;
+        height: 55px;
+        padding: 6px;
+    }
+
+    .unair-brand {
+        gap: 8px;
+    }
+
+    .unair-text {
+        font-size: 11px;
+    }
+
+    .brand-divider {
+        height: 48px;
+    }
+
+    .pmb-brand {
+        gap: 6px;
+    }
+
+    .pmb-brand h2 {
+        font-size: 30px;
+    }
+
+    .pmb-brand span {
+        font-size: 9px;
+    }
+
+    .hero-text h1 {
+        font-size: 39px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .login-right {
+        padding: 35px 22px;
+    }
+}

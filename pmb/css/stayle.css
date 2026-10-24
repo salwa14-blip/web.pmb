@@ -1,0 +1,994 @@
+/* =========================================
+   RESET DAN PENGATURAN DASAR
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+:root {
+    --primary: #087fc4;
+    --primary-dark: #07518b;
+    --navy: #073b69;
+    --sky: #82ddec;
+    --white: #ffffff;
+    --text: #172c43;
+    --muted: #64748b;
+    --light-bg: #f4f8fc;
+    --border: #e2eaf2;
+    --shadow: 0 16px 45px rgba(7, 59, 105, 0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.home-container {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    width: 100%;
+    min-height: 108px;
+    padding: 18px 5.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+
+    background: linear-gradient(
+        110deg,
+        #064a80 0%,
+        #1679a9 48%,
+        #8be3ed 100%
+    );
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    flex-shrink: 0;
+    color: var(--white);
+}
+
+.univ-logo {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: var(--white);
+    padding: 3px;
+}
+
+.univ-name {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 16px;
+    line-height: 1.25;
+    white-space: nowrap;
+    letter-spacing: 0.2px;
+}
+
+.univ-name strong {
+    font-weight: 800;
+}
+
+.univ-name span {
+    font-weight: 700;
+}
+
+.header-line {
+    width: 2px;
+    height: 54px;
+    margin: 0 8px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pmb {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 43px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.garis {
+    width: 2px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.logo-subtitle {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+
+/* =========================================
+   NAVIGASI
+========================================= */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 27px;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.45px;
+    position: relative;
+    transition: opacity 0.25s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: var(--white);
+    transition: width 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    opacity: 0.85;
+}
+
+.nav-login {
+    min-height: 46px;
+    padding: 0 21px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 800;
+    white-space: nowrap;
+    transition: 0.25s ease;
+}
+
+.nav-login:hover {
+    background: var(--white);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    min-height: 680px;
+    height: calc(100vh - 108px);
+    max-height: 850px;
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+    background: #073b69;
+}
+
+/* FOTO KAMPUS DI SISI KANAN */
+.hero-photo {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    right: 0;
+    width: 62%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* GRADASI BIRU MENYATU DENGAN FOTO */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background: linear-gradient(
+        90deg,
+        #073b69 0%,
+        #073b69 25%,
+        rgba(7, 59, 105, 0.96) 38%,
+        rgba(7, 59, 105, 0.72) 52%,
+        rgba(7, 59, 105, 0.20) 76%,
+        rgba(7, 59, 105, 0.05) 100%
+    );
+}
+
+/* KONTEN TULISAN */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 65px 8%;
+}
+
+.hero-text {
+    position: relative;
+    width: 100%;
+    max-width: 760px;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 760px;
+}
+
+.hero-badge {
+    width: fit-content;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    margin-bottom: 27px;
+
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.25px;
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #80e7d1;
+    box-shadow: 0 0 12px rgba(128, 231, 209, 0.8);
+}
+
+.welcome {
+    margin-bottom: 8px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(21px, 2.2vw, 30px);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.hero h1 {
+    margin-bottom: 19px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(43px, 5.3vw, 75px);
+    font-weight: 800;
+    line-height: 1.07;
+    letter-spacing: -2px;
+    text-wrap: balance;
+}
+
+.hero h1 span {
+    color: #91edfa;
+}
+
+.hero-univ {
+    margin-bottom: 15px;
+    font-size: clamp(17px, 2vw, 23px);
+    font-weight: 800;
+    letter-spacing: 0.1px;
+}
+
+.description {
+    max-width: 610px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.91);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   TOMBOL HERO
+========================================= */
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 13px;
+}
+
+.button {
+    min-height: 56px;
+    padding: 0 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+
+    border-radius: 10px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.button-primary {
+    color: var(--white);
+    background: var(--primary);
+    box-shadow: 0 8px 24px rgba(0, 111, 193, 0.3);
+}
+
+.button-primary:hover {
+    background: #0699e5;
+    box-shadow: 0 12px 28px rgba(0, 111, 193, 0.38);
+}
+
+.button-arrow {
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 18px;
+}
+
+.button-secondary {
+    color: var(--white);
+    border: 1.5px solid rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(8px);
+}
+
+.button-secondary:hover {
+    color: var(--navy);
+    background: var(--white);
+}
+
+.button-icon {
+    font-size: 19px;
+}
+
+.hero-note {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.83);
+    font-size: 12px;
+}
+
+.note-icon {
+    width: 21px;
+    height: 21px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    color: var(--navy);
+    background: #91edfa;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 24px;
+    right: 6%;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.scroll-line {
+    width: 30px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================================
+   BAGIAN INFORMASI
+========================================= */
+
+.intro-section {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+
+    padding: 90px 7%;
+    background: var(--light-bg);
+}
+
+.intro-heading {
+    grid-column: 1 / -1;
+    max-width: 790px;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.intro-heading h2,
+.cta-content h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(29px, 3.6vw, 43px);
+    line-height: 1.25;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.intro-heading h2 span {
+    color: var(--primary);
+}
+
+.intro-heading > p {
+    max-width: 680px;
+    margin: 20px auto 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.intro-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    padding: 27px 23px;
+
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background: var(--white);
+    box-shadow: 0 5px 20px rgba(7, 59, 105, 0.035);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.intro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.intro-card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+    color: var(--primary);
+    background: #e7f6ff;
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.intro-card h3 {
+    margin-bottom: 7px;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.intro-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CALL TO ACTION
+========================================= */
+
+.cta-section {
+    padding: 85px 7%;
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(145, 237, 250, 0.15),
+            transparent 40%
+        ),
+        linear-gradient(120deg, #063c6b, #087fc4);
+    color: var(--white);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.cta-section .section-label {
+    color: #91edfa;
+}
+
+.cta-content h2 {
+    margin-bottom: 17px;
+}
+
+.cta-content p {
+    max-width: 600px;
+    margin: 0 auto 28px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.button-cta {
+    color: var(--navy);
+    background: var(--white);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.13);
+}
+
+.button-cta:hover {
+    background: #e5faff;
+}
+
+.button-cta span {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 26px 7%;
+    background: #062e50;
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: var(--white);
+    padding: 2px;
+}
+
+.footer-brand div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.footer-brand strong {
+    color: var(--white);
+    font-size: 11px;
+    letter-spacing: 0.4px;
+}
+
+.footer-brand span {
+    font-size: 10px;
+}
+
+.footer > p {
+    font-size: 10px;
+    text-align: right;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .header {
+        padding: 17px 4%;
+        gap: 20px;
+    }
+
+    .univ-logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .univ-name {
+        font-size: 13px;
+    }
+
+    .header-line {
+        margin: 0 3px;
+    }
+
+    .pmb {
+        font-size: 34px;
+    }
+
+    .logo-subtitle {
+        font-size: 11px;
+    }
+
+    .navigation {
+        gap: 17px;
+    }
+
+    .nav-link {
+        font-size: 10px;
+    }
+
+    .nav-login {
+        min-height: 42px;
+        padding: 0 15px;
+        font-size: 11px;
+    }
+
+    .hero-content {
+        padding: 75px 7%;
+    }
+
+    .intro-section {
+        padding: 70px 5%;
+        gap: 16px;
+    }
+
+    .intro-card {
+        padding: 22px 17px;
+        gap: 12px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+
+    html {
+        scroll-padding-top: 20px;
+    }
+
+    .header {
+        padding: 16px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 17px;
+    }
+
+    .logo-area {
+        justify-content: center;
+        gap: 9px;
+    }
+
+    .univ-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .univ-name {
+        font-size: 11px;
+    }
+
+    .header-line {
+        height: 40px;
+        margin: 0 3px;
+    }
+
+    .logo-text {
+        gap: 8px;
+    }
+
+    .pmb {
+        font-size: 29px;
+    }
+
+    .garis {
+        height: 37px;
+    }
+
+    .logo-subtitle {
+        font-size: 9px;
+    }
+
+    .navigation {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .nav-link {
+        font-size: 9px;
+    }
+
+    .nav-login {
+        min-height: 35px;
+        padding: 0 12px;
+        border-radius: 8px;
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 680px;
+        min-height: min(760px, calc(100svh - 140px));
+        background-position: 58% center;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(3, 40, 76, 0.87),
+                rgba(4, 67, 110, 0.62)
+            ),
+            linear-gradient(
+                0deg,
+                rgba(4, 31, 57, 0.35),
+                rgba(4, 31, 57, 0.12)
+            );
+    }
+
+    .hero-content {
+        padding: 65px 7% 80px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-badge {
+        padding: 9px 12px;
+        margin-bottom: 25px;
+        font-size: 8px;
+        letter-spacing: 0.7px;
+    }
+
+    .welcome {
+        font-size: 22px;
+    }
+
+    .hero h1 {
+        font-size: clamp(39px, 10vw, 58px);
+        letter-spacing: -1.5px;
+        line-height: 1.12;
+    }
+
+    .hero-univ {
+        font-size: 17px;
+    }
+
+    .description {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+        min-height: 53px;
+        padding: 0 16px;
+        font-size: 12px;
+    }
+
+    .hero-note {
+        align-items: flex-start;
+        font-size: 10px;
+        line-height: 1.7;
+    }
+
+    .scroll-indicator {
+        bottom: 17px;
+        right: 7%;
+        font-size: 8px;
+    }
+
+    .intro-section {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 65px 6%;
+    }
+
+    .intro-heading {
+        margin-bottom: 15px;
+    }
+
+    .intro-heading h2,
+    .cta-content h2 {
+        font-size: 29px;
+    }
+
+    .intro-heading > p {
+        font-size: 12px;
+    }
+
+    .intro-card {
+        padding: 22px 18px;
+    }
+
+    .cta-section {
+        padding: 65px 7%;
+    }
+
+    .cta-content p {
+        font-size: 12px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 25px 6%;
+    }
+
+    .footer > p {
+        text-align: left;
+        line-height: 1.8;
+    }
+}
+
+
+/* =========================================
+   HP KECIL
+========================================= */
+
+@media (max-width: 380px) {
+
+    .univ-name {
+        font-size: 9px;
+    }
+
+    .univ-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .pmb {
+        font-size: 25px;
+    }
+
+    .logo-subtitle {
+        font-size: 8px;
+    }
+
+    .navigation {
+        gap: 9px;
+    }
+
+    .nav-link {
+        font-size: 8px;
+    }
+
+    .nav-login {
+        padding: 0 9px;
+        font-size: 9px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-badge {
+        font-size: 7px;
+    }
+}
+
+
+/* =========================================
+   AKSESIBILITAS
+========================================= */
+
+a:focus-visible {
+    outline: 3px solid #91edfa;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

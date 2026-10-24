@@ -1,0 +1,687 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #292929;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 245px;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background: #72a5ed;
+
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    color: white;
+
+    font-family: Georgia, serif;
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+.admin-label {
+    color: rgba(255, 255, 255, .7);
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    margin-bottom: 35px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.sidebar nav a {
+    color: white;
+
+    padding: 15px 14px;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    transition: .2s;
+}
+
+.sidebar nav a:hover {
+    background: rgba(255, 255, 255, .15);
+}
+
+.logout {
+    margin-top: auto;
+
+    background: white;
+
+    color: #397fd9;
+
+    padding: 13px;
+
+    border-radius: 9px;
+
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content {
+    margin-left: 245px;
+
+    min-height: 100vh;
+
+    padding: 35px 40px 60px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.header p {
+    color: #888;
+
+    font-size: 13px;
+
+    margin-bottom: 6px;
+}
+
+.header h1 {
+    color: #397fd9;
+
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+}
+
+.back {
+    background: white;
+
+    color: #397fd9;
+
+    padding: 11px 18px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, .04);
+}
+
+.back:hover {
+    background: #edf4ff;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.message {
+    margin-bottom: 20px;
+
+    padding: 14px 18px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+}
+
+.message.success {
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+.message.error {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+
+/* =========================================
+   PROFILE CARD
+========================================= */
+
+.profile-card {
+    width: 100%;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 40px;
+
+    display: grid;
+
+    grid-template-columns: 300px 1fr;
+
+    gap: 45px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, .05);
+}
+
+
+/* =========================================
+   PROFILE LEFT
+========================================= */
+
+.profile-left {
+    text-align: center;
+
+    padding-right: 40px;
+
+    border-right: 1px solid #edf0f5;
+}
+
+
+/* =========================================
+   FOTO PROFIL ADMIN
+========================================= */
+
+.big-avatar {
+    width: 145px;
+    height: 145px;
+
+    min-width: 145px;
+    min-height: 145px;
+
+    max-width: 145px;
+    max-height: 145px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: #72a5ed;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 145px;
+
+    font-size: 48px;
+    font-weight: bold;
+
+    border: 6px solid #edf4ff;
+
+    position: relative;
+}
+
+
+/* FOTO ASLI */
+
+.big-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+
+    min-width: 100% !important;
+    min-height: 100% !important;
+
+    max-width: 100% !important;
+    max-height: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+    border-radius: 50% !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    display: block !important;
+
+    position: static !important;
+}
+
+
+/* HURUF JIKA BELUM ADA FOTO */
+
+.big-avatar span {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 48px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   NAMA ADMIN
+========================================= */
+
+.profile-left h2 {
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    margin-bottom: 6px;
+}
+
+.profile-left p {
+    color: #888;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   PROFILE ACTION
+========================================= */
+
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.edit-button,
+.password-button {
+    width: 100%;
+
+    display: block;
+
+    padding: 13px 16px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.edit-button {
+    background: #72a5ed;
+
+    color: white;
+}
+
+.edit-button:hover {
+    background: #5f97e7;
+}
+
+.password-button {
+    background: #edf4ff;
+
+    color: #397fd9;
+}
+
+.password-button:hover {
+    background: #e0ecff;
+}
+
+
+/* =========================================
+   PROFILE RIGHT
+========================================= */
+
+.profile-right {
+    padding: 5px 0;
+}
+
+.profile-title {
+    margin-bottom: 28px;
+}
+
+.profile-title h2 {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    margin-bottom: 7px;
+}
+
+.profile-title p {
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   INFO
+========================================= */
+
+.info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.info-item {
+    background: #f7f9fc;
+
+    border: 1px solid #eef1f5;
+
+    padding: 19px;
+
+    border-radius: 11px;
+}
+
+.info-item span {
+    display: block;
+
+    color: #929292;
+
+    font-size: 12px;
+
+    margin-bottom: 8px;
+}
+
+.info-item strong {
+    display: block;
+
+    color: #292929;
+
+    font-size: 15px;
+
+    word-break: break-word;
+}
+
+.status-active {
+    color: #16a34a !important;
+}
+
+
+/* =========================================
+   EDIT PROFILE CARD
+========================================= */
+
+.edit-card {
+    width: 100%;
+
+    max-width: 800px;
+
+    background: white;
+
+    padding: 32px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, .04);
+}
+
+
+/* =========================================
+   FOTO DI HALAMAN EDIT
+========================================= */
+
+.photo-section {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding-bottom: 25px;
+
+    margin-bottom: 25px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.photo-section .big-avatar {
+    width: 105px;
+    height: 105px;
+
+    min-width: 105px;
+    min-height: 105px;
+
+    max-width: 105px;
+    max-height: 105px;
+
+    flex: 0 0 105px;
+
+    margin: 0;
+
+    font-size: 35px;
+}
+
+.photo-section .big-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    border-radius: 50% !important;
+}
+
+.photo-section .big-avatar span {
+    font-size: 35px;
+}
+
+
+/* =========================================
+   PHOTO INPUT
+========================================= */
+
+.photo-input {
+    flex: 1;
+}
+
+.photo-input label {
+    display: block;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.photo-input input {
+    display: block;
+
+    max-width: 100%;
+
+    margin-bottom: 7px;
+}
+
+.photo-input small {
+    color: #888;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+
+    height: 47px;
+
+    padding: 0 14px;
+
+    border: 1px solid #dce3ed;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    background: white;
+}
+
+.form-group input:focus {
+    border-color: #72a5ed;
+
+    box-shadow:
+        0 0 0 3px rgba(114, 165, 237, .12);
+}
+
+
+/* =========================================
+   SAVE BUTTON
+========================================= */
+
+.save-button {
+    width: 100%;
+
+    border: none;
+
+    background: #72a5ed;
+
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background: #5f97e7;
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .profile-card {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-left {
+        padding-right: 0;
+
+        padding-bottom: 30px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid #edf0f5;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+
+        padding: 25px 20px;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        font-size: 27px;
+    }
+
+    .profile-card {
+        padding: 25px 20px;
+    }
+
+    .photo-section {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}
